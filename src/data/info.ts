@@ -72,7 +72,7 @@ export const info = {
 
   projects: [
     {
-      title: "Astro Portfolio",
+      title: "Personal Portfolio",
       isFeatured: true,
       thumbnails: {
         png: "/assets/images/astro-portfolio.png",
@@ -80,7 +80,18 @@ export const info = {
         webp: "/assets/images/astro-portfolio.webp",
       },
       githubUrl: "https://github.com/MrOlivo/astro-portfolio",
-      liveUrl: "",
+      liveUrl: "https://mrolivo.github.io",
+    },
+    {
+      title: "Brutalism Concept website",
+      isFeatured: true,
+      thumbnails: {
+        png: "/assets/images/brutalism.png",
+        avif: "/assets/images/brutalism.avif",
+        webp: "/assets/images/brutalism.webp",
+      },
+      githubUrl: "https://github.com/MrOlivo/Brutalism-UI",
+      liveUrl: "https://mrolivo.github.io/Brutalism-UI",
     },
   ],
 };
