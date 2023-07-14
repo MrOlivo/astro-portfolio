@@ -1,5 +1,5 @@
 export const info = {
-  baseUrl: "https://olivo.moe/",
+  baseUrl: "https://mrolivo.github.io/",
   name: "Edwin Olivo",
   jobDescription: "Web Developer",
   about: `Soy ingeniero de software y vivo en Tepic, México.
