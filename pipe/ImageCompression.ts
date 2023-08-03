@@ -11,7 +11,7 @@ async function listDir(path: string): Promise<string[]> {
 
 const directoryPath = __dirname;
 const files = await listDir(directoryPath)
-const onlyImages = files.filter(file => file.split(".").pop() === "jpg")
+const onlyImages = files.filter(file => ["png", "jpg"].includes(file.split(".").pop()))
 
 if(onlyImages.length === 0) {
   console.error("No images were found.");
