@@ -93,5 +93,16 @@ export const info = {
       githubUrl: "https://github.com/MrOlivo/Brutalism-UI",
       liveUrl: "https://mrolivo.github.io/Brutalism-UI",
     },
+    {
+      title: "Manga Calendar - Raycast extension",
+      isFeatured: true,
+      thumbnails: {
+        png: "/assets/images/manga-calendar.png",
+        avif: "/assets/images/manga-calendar.avif",
+        webp: "/assets/images/manga-calendar.webp",
+      },
+      githubUrl: "https://github.com/MrOlivo/manga-schedule",
+      liveUrl: "https://www.raycast.com/mrolivo/manga-calendar",
+    },
   ],
 };
