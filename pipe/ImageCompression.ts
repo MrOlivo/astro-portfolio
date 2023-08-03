@@ -19,15 +19,15 @@ if(onlyImages.length === 0) {
 }
 
 const promises: Array<sharp.Sharp> = [];
-const height: number = 567;
+const width: number = 567;
 
 onlyImages.forEach(file => {
-  const fileName = directoryPath + "/" + file.split(".")[0];
+  const fileName = directoryPath + "/_" + file.split(".")[0];
   const sharpStream = sharp(`${directoryPath}/${file}`);
 
   promises.push(
     sharpStream
-      .resize(height)
+      .resize(width)
       .png({ quality: 80 })
       .toFile(fileName + '.png', function (err) {
         console.error(err);
@@ -35,7 +35,7 @@ onlyImages.forEach(file => {
 
   promises.push(
     sharpStream
-      .resize(height)
+      .resize(width)
       .webp()
       .toFile(fileName + '.webp', function (err) {
         console.error(err);
@@ -43,7 +43,7 @@ onlyImages.forEach(file => {
   )
   promises.push(
     sharpStream
-      .resize(height)
+      .resize(width)
       .avif()
       .toFile(fileName + '.avif', function (err) {
         console.error(err);
