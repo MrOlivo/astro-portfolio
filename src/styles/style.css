@@ -40,8 +40,4 @@
   a {
     @apply font-inter text-dark-gray;
   }
-
-  .footer-icons {
-    @apply flex items-center justify-center p-3 ml-2 rounded-lg bg-slate-300 dark:bg-sky-200 hover:bg-sky-300 dark:hover:bg-indigo-300;
-  }
 }

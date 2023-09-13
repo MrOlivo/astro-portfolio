@@ -50,7 +50,7 @@ export interface IProjectDetails {
   projectDetail: IProject;
 }
 
-export interface ISocialMedia {
+export interface ILink {
   title: string;
   href: string;
 }
