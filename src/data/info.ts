@@ -11,7 +11,7 @@ export const info = {
   experience: [
     {
       name: "CICESE-UT3",
-      position: "Becario",
+      position: "Programador Becario",
       startDate: "Septiembre 2022",
       endDate: "Diciembre 2022",
       description: [
@@ -35,7 +35,7 @@ export const info = {
 
     {
       name: "Unidad Académica de Economía",
-      position: "Porgramador",
+      position: "Programador",
       startDate: "Diciembre 2019",
       endDate: "Marzo 2020",
       description: [
@@ -50,10 +50,11 @@ export const info = {
   education: [
     {
       name: "Universidad Autónoma de Nayarit",
+      position: "Lic. Sistemas Computacionales",
       startDate: "2017",
       endDate: "2023",
       description: [
-        "Licenciatura en Sistemas Computacionales",
+        "Me he formado en un entorno de excelencia, calidad competitiva y compromiso ético y social, adquiriendo habilidades y competencias para analizar, diseñar, construir, implementar y mantener sistemas de información organizativos.También he sido capacitado para definir el entorno de tecnologías de la información y comunicaciones necesario para su funcionamiento óptimo.",
       ],
     },
   ],
