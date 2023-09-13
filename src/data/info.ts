@@ -12,7 +12,6 @@ export const info = {
     {
       name: "CICESE-UT3",
       position: "Becario",
-      location: "Tepic, Nayarit, México",
       startDate: "Septiembre 2022",
       endDate: "Diciembre 2022",
       description: [
@@ -25,7 +24,6 @@ export const info = {
     {
       name: "D4ALL",
       position: "Editor de contenidos",
-      location: "Tepic, Nayarit, México",
       startDate: "Junio 2022",
       endDate: "Agosto 2022",
       description: [
@@ -38,7 +36,6 @@ export const info = {
     {
       name: "Unidad Académica de Economía",
       position: "Porgramador",
-      location: "Tepic, Nayarit, México",
       startDate: "Diciembre 2019",
       endDate: "Marzo 2020",
       description: [
@@ -53,7 +50,6 @@ export const info = {
   education: [
     {
       name: "Universidad Autónoma de Nayarit",
-      location: "Tepic, Nayarit, México",
       startDate: "2017",
       endDate: "2023",
       description: [
@@ -63,10 +59,9 @@ export const info = {
   ],
 
   socialMedia: {
-    facebook: "https://facebook.com",
-    twitter: "https://twitter.com",
+    bento: "https://bento.me/xconnect",
     github: "https://github.com/MrOlivo",
-    email: "mailto:user@domain.com",
+    email: "mailto:edwin.olivo@proton.me",
     linkedin: "https://www.linkedin.com/in/edwin-olivo-garcia/",
   },
 
