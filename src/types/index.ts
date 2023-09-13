@@ -16,7 +16,7 @@ export interface INavItemProps {
 
 export interface IExperience {
   name: string;
-  positiion: string;
+  position: string;
   location: string;
   startDate: string;
   endDate: string;
