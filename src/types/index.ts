@@ -49,3 +49,8 @@ export interface IProjects {
 export interface IProjectDetails {
   projectDetail: IProject;
 }
+
+export interface ISocialMedia {
+  title: string;
+  href: string;
+}
