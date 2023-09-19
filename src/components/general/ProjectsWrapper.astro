@@ -1,10 +1,19 @@
 ---
-import { IProjects } from "@types";
+import { Projects } from "@types";
 import ProjectCard from "./ProjectCard.astro";
 
-const { projects } = Astro.props as IProjects;
+const { projects } = Astro.props as Projects;
 ---
 
 <div class="grid md:grid-cols-2 grid-cols-1 gap-4 my-16">
-  {projects.map((project) => <ProjectCard projectDetail={project} />)}
+  {
+    projects.map(({ title, thumbnails, liveUrl, githubUrl }) => (
+      <ProjectCard
+        title={title}
+        thumbnails={thumbnails}
+        liveUrl={liveUrl}
+        githubUrl={githubUrl}
+      />
+    ))
+  }
 </div>

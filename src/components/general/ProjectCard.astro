@@ -1,7 +1,6 @@
 ---
-import { IProjectDetails } from "@types";
-const { projectDetail } = Astro.props as IProjectDetails;
-const { title, thumbnails, liveUrl, githubUrl } = projectDetail;
+import { Project } from "@types";
+const { title, thumbnails, liveUrl, githubUrl } = Astro.props as Project;
 ---
 
 <article class="w-full max-h-72 overflow-hidden relative group">
