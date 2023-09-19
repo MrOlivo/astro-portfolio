@@ -2,7 +2,7 @@
 
 [![Deploy to GitHub Pages](https://github.com/MrOlivo/mrolivo.github.io/actions/workflows/deploy.yml/badge.svg?branch=master)](https://github.com/MrOlivo/mrolivo.github.io/actions/workflows/deploy.yml)
 
-Just change `src/data/info.ts` to get your personal portfolio.
+Just change `src/data/index.ts` to get your personal portfolio.
 
 ## portfolio template for Developers!
 

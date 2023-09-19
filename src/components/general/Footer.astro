@@ -1,8 +1,6 @@
 ---
-import { info } from "@data";
-import bento  from "../../assets/bento.svg?raw";
-import email  from "../../assets/email.svg?raw";
-import github  from "../../assets/github.svg?raw";
+import { information } from "@data";
+import { bento, email, github } from "@assets";
 import LinkItem from "./LinkItem.astro";
 const { ...props } = Astro.props;
 ---
@@ -15,14 +13,14 @@ const { ...props } = Astro.props;
     Improved by <strong>Edwin Olivo</strong>
   </p>
   <div class="grid grid-cols-3 gap-4">
-    <LinkItem title="Bento" href={info.socialMedia.bento}>
-      <Fragment set:html={bento}/>
+    <LinkItem title="Bento" href={information.socialMedia.bento}>
+      <Fragment set:html={bento} />
     </LinkItem>
-    <LinkItem title="GitHub" href={info.socialMedia.github}>
-      <Fragment set:html={github}/>
+    <LinkItem title="GitHub" href={information.socialMedia.github}>
+      <Fragment set:html={github} />
     </LinkItem>
-    <LinkItem title="Email" href={info.socialMedia.email}>
-      <Fragment set:html={email}/>
+    <LinkItem title="Email" href={information.socialMedia.email}>
+      <Fragment set:html={email} />
     </LinkItem>
   </div>
 </footer>

@@ -1,5 +1,5 @@
 ---
-import { info } from "@data";
+import { information } from "@data";
 
 import Layout from "@layouts/Layout.astro";
 import Hero from "@components/home/Hero.astro";
@@ -7,7 +7,7 @@ import Experience from "@components/home/Experience.astro";
 import ProjectsWrapper from "@components/general/ProjectsWrapper.astro";
 import MetaHead from "@components/general/MetaHead.astro";
 
-const featureProjects = info.projects.reduce((accumulator, project) => {
+const featureProjects = information.projects.reduce((accumulator, project) => {
   if (accumulator.length < 6 && project.isFeatured) {
     accumulator.push(project);
   }
@@ -15,21 +15,29 @@ const featureProjects = info.projects.reduce((accumulator, project) => {
 }, []);
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es" class="scroll-smooth">
   <head>
     <MetaHead
       title={"Portafolio"}
-      description={info.about}
+      description={information.about}
       ogImageUrl={"/assets/images/profile.png"}
     />
   </head>
 
   <body>
     <Layout>
-      <Hero name={info.name} about={info.about} />
-      <Experience title={"Experiencia"} details={info.experience} id="experience"/>
-      <Experience title={"Educación"} details={info.education} id="education" />
+      <Hero name={information.name} about={information.about} />
+      <Experience
+        title={"Experiencia"}
+        details={information.experience}
+        id="experience"
+      />
+      <Experience
+        title={"Educación"}
+        details={information.education}
+        id="education"
+      />
       <section id="projects" class="bg-light dark:bg-dark">
         <h2 class="w-[15rem] pt-16 dark:text-light uppercase">Proyectos</h2>
         <ProjectsWrapper projects={featureProjects} />

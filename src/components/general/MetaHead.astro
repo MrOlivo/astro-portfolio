@@ -1,6 +1,6 @@
 ---
 import { MetaHead } from "@types";
-import { info } from "@data";
+import { information } from "@data";
 
 const { title, description, ogImageUrl } = Astro.props as MetaHead;
 ---
@@ -24,25 +24,35 @@ const { title, description, ogImageUrl } = Astro.props as MetaHead;
 <!-- Primary Meta Tags -->
 {
   title && (
-    <link rel="canonical" href={`${info.baseUrl}${Astro.url.pathname}`} />
+    <link
+      rel="canonical"
+      href={`${information.baseUrl}${Astro.url.pathname}`}
+    />
   )
 }
-{title && <title>{`${title} - ${info.name}`}</title>}
-{title && <meta name="title" content={`${title} - ${info.name}`} />}
+{title && <title>{`${title} - ${information.name}`}</title>}
+{title && <meta name="title" content={`${title} - ${information.name}`} />}
 {description && <meta name="description" content={description} />}
 
 <!-- Open Graph / Facebook -->
 {title && <meta property="og:type" content="website" />}
 {
   title && (
-    <meta property="og:url" content={`${info.baseUrl}${Astro.url.pathname}`} />
+    <meta
+      property="og:url"
+      content={`${information.baseUrl}${Astro.url.pathname}`}
+    />
   )
 }
-{title && <meta property="og:title" content={`${title} - ${info.name}`} />}
+{
+  title && (
+    <meta property="og:title" content={`${title} - ${information.name}`} />
+  )
+}
 {description && <meta property="og:description" content={description} />}
 {
   ogImageUrl && (
-    <meta property="og:image" content={`${info.baseUrl}${ogImageUrl}`} />
+    <meta property="og:image" content={`${information.baseUrl}${ogImageUrl}`} />
   )
 }
 
@@ -52,14 +62,21 @@ const { title, description, ogImageUrl } = Astro.props as MetaHead;
   title && (
     <meta
       property="twitter:url"
-      content={`${info.baseUrl}${Astro.url.pathname}`}
+      content={`${information.baseUrl}${Astro.url.pathname}`}
     />
   )
 }
-{title && <meta property="twitter:title" content={`${title} - ${info.name}`} />}
+{
+  title && (
+    <meta property="twitter:title" content={`${title} - ${information.name}`} />
+  )
+}
 {description && <meta property="twitter:description" content={description} />}
 {
   ogImageUrl && (
-    <meta property="twitter:image" content={`${info.baseUrl}${ogImageUrl}`} />
+    <meta
+      property="twitter:image"
+      content={`${information.baseUrl}${ogImageUrl}`}
+    />
   )
 }
