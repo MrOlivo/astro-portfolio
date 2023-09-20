@@ -1,0 +1,22 @@
+---
+import { Projects } from "@types";
+import ProjectCard from "@components/ProjectCard.astro";
+import Section from "@components/Section.astro";
+
+const { title, projects, ...props } = Astro.props as Projects;
+---
+
+<Section title={title} {...props}>
+  <div class="grid md:grid-cols-2 grid-cols-1 gap-4 my-16">
+    {
+      projects.map(({ title, thumbnails, liveUrl, githubUrl }) => (
+        <ProjectCard
+          title={title}
+          thumbnails={thumbnails}
+          liveUrl={liveUrl}
+          githubUrl={githubUrl}
+        />
+      ))
+    }
+  </div>
+</Section>

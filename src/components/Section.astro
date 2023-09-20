@@ -1,0 +1,13 @@
+---
+const { title, ...props } = Astro.props as { title: string };
+---
+
+<section
+  class="flex items-start justify-between flex-col sm:flex-row dark:text-light"
+  {...props}
+>
+  <h2 class="w-[15rem] mt-16 uppercase">{title}</h2>
+  <div class="w-full">
+    <slot />
+  </div>
+</section>

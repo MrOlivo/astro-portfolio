@@ -36,6 +36,7 @@ export interface Project {
 }
 
 export interface Projects {
+  title: string;
   projects: Project[];
 }
 

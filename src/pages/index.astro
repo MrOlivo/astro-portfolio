@@ -4,15 +4,15 @@ import { information } from "@data";
 import Layout from "@layouts/Layout.astro";
 import Hero from "@components/home/Hero.astro";
 import Experience from "@components/home/Experience.astro";
-import ProjectsWrapper from "@components/general/ProjectsWrapper.astro";
-import MetaHead from "@components/general/MetaHead.astro";
+import Projects from "@components/Projects.astro";
+import MetaHead from "@components/MetaHead.astro";
 
-const featureProjects = information.projects.reduce((accumulator, project) => {
-  if (accumulator.length < 6 && project.isFeatured) {
-    accumulator.push(project);
-  }
-  return accumulator;
-}, []);
+// const featureProjects = information.projects.reduce((accumulator, project) => {
+//   if (accumulator.length < 6 && project.isFeatured) {
+//     accumulator.push(project);
+//   }
+//   return accumulator;
+// }, []);
 ---
 
 <!doctype html>
@@ -29,19 +29,20 @@ const featureProjects = information.projects.reduce((accumulator, project) => {
     <Layout>
       <Hero name={information.name} about={information.about} />
       <Experience
-        title={"Experiencia"}
+        title="Experiencia"
         details={information.experience}
         id="experience"
       />
       <Experience
-        title={"Educación"}
+        title="Educación"
         details={information.education}
         id="education"
       />
-      <section id="projects" class="bg-light dark:bg-dark">
-        <h2 class="w-[15rem] pt-16 dark:text-light uppercase">Proyectos</h2>
-        <ProjectsWrapper projects={featureProjects} />
-      </section>
+      <Projects
+        title="Proyectos"
+        projects={information.projects}
+        id="projects"
+      />
     </Layout>
   </body>
 </html>
