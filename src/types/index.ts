@@ -40,6 +40,11 @@ export interface Projects {
   projects: Project[];
 }
 
+export interface SkillSet {
+  title: string;
+  list: string[];
+}
+
 export interface Thumbnail {
   png: string;
   jpg?: string;

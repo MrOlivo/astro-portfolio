@@ -1,0 +1,25 @@
+---
+import Section from "@components/Section.astro";
+import { SkillSet } from "@types";
+const { title, skillSets, ...props } = Astro.props as {
+  title: string;
+  skillSets: SkillSet[];
+};
+---
+
+<Section title={title} {...props}>
+  {
+    skillSets.map(({ title, list }) => {
+      return (
+        <article class="my-8 first:mt-8 md:first:mt-16">
+          <h3 class="text-xl font-semibold capitalize">{title}</h3>
+          <div class="grid grid-cols-3 md:grid-cols-5 gap-4 my-4">
+            {list.map((skill) => (
+              <span class="block dark:text-gray">{skill}</span>
+            ))}
+          </div>
+        </article>
+      );
+    })
+  }
+</Section>

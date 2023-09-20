@@ -6,6 +6,7 @@ import Hero from "@components/home/Hero.astro";
 import Experience from "@components/home/Experience.astro";
 import Projects from "@components/Projects.astro";
 import MetaHead from "@components/MetaHead.astro";
+import Skills from "@components/Skills.astro";
 
 // const featureProjects = information.projects.reduce((accumulator, project) => {
 //   if (accumulator.length < 6 && project.isFeatured) {
@@ -38,6 +39,7 @@ import MetaHead from "@components/MetaHead.astro";
         details={information.education}
         id="education"
       />
+      <Skills title="Skills" skillSets={information.skills} id="skills" />
       <Projects
         title="Proyectos"
         projects={information.projects}
