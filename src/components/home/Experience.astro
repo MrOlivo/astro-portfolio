@@ -1,22 +1,19 @@
 ---
-import { IExperiences } from "@types";
+import Section from "@components/Section.astro";
+import { Experiences } from "@types";
 
-const { title, details, ...props } = Astro.props as IExperiences;
+const { title, details, ...props } = Astro.props as Experiences;
 ---
 
-<section
-  class="flex items-start justify-between flex-col sm:flex-row dark:text-light"
-  {...props}
->
-  <h2 class="w-[15rem] mt-16 uppercase">{title}</h2>
-  <div class="w-full">
+<Section title={title} {...props}>
     {
       details.map((item) => (
-        <div class="my-8 pt-8">
+        <article class="my-8 first:mt-8 md:first:mt-16">
           <div class="flex justify-between items-center flex-wrap">
             <h3 class="text-xl font-semibold">
-              {item.position} - <span class="text-cyan-900 dark:text-blue">{item.name}</span>
-              </h3>
+              {item.position} -{" "}
+              <span class="text-cyan-900 dark:text-blue">{item.name}</span>
+            </h3>
             <p class="text-sm dark:text-gray">
               {item.startDate} - {item.endDate}
             </p>
@@ -26,8 +23,7 @@ const { title, details, ...props } = Astro.props as IExperiences;
               <li class="dark:text-gray list-disc marker:text-blue">{item}</li>
             ))}
           </ul>
-        </div>
+        </article>
       ))
     }
-  </div>
-</section>
+</Section>

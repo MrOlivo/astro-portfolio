@@ -1,4 +1,4 @@
-export const info = {
+export const information = {
   baseUrl: "https://mrolivo.github.io/",
   name: "Edwin Olivo",
   jobDescription: "Web Developer",

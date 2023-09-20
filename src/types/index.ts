@@ -1,20 +1,20 @@
-export interface IMetaHead {
+export interface MetaHead {
   title: string;
   description: string;
   ogImageUrl: string;
 }
 
-export interface IHeroProps {
+export interface HeroProps {
   name: string;
   about: string;
 }
 
-export interface INavItemProps {
+export interface NavItemProps {
   text: string;
   link: string;
 }
 
-export interface IExperience {
+export interface Experience {
   name: string;
   position: string;
   location: string;
@@ -22,32 +22,29 @@ export interface IExperience {
   endDate: string;
   description: string[];
 }
-export interface IExperiences {
+export interface Experiences {
   title: string;
-  details: IExperience[];
+  details: Experience[];
 }
 
-export interface IProject {
+export interface Project {
   title: string;
   isFeatured: boolean;
-  thumbnails: IThumbnail;
+  thumbnails: Thumbnail;
   githubUrl: string;
   liveUrl: string;
 }
 
-export interface IThumbnail {
+export interface Projects {
+  title: string;
+  projects: Project[];
+}
+
+export interface Thumbnail {
   png: string;
   jpg?: string;
   avif?: string;
   webp?: string;
-}
-
-export interface IProjects {
-  projects: IProject[];
-}
-
-export interface IProjectDetails {
-  projectDetail: IProject;
 }
 
 export interface ILink {

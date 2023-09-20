@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Outfit:wght@400;600&display=swap");
 
 /* ========== import custom styles ========== */
-@import "custom-styles.css";
+@import "gradient.css";
 
 @tailwind base;
 @tailwind components;
@@ -12,10 +12,6 @@
 @layer components {
   body {
     @apply bg-light dark:bg-dark;
-  }
-
-  .container {
-    @apply max-w-[1112px] mx-auto px-4;
   }
 
   h1,
@@ -32,12 +28,16 @@
   }
 
   h2 {
-    @apply text-xl font-semibold underline decoration-4 decoration-blue;
+    @apply text-xl font-semibold;
   }
 
   p,
   li,
   a {
     @apply font-inter text-dark-gray;
+  }
+
+  .container {
+    @apply max-w-[1112px] mx-auto px-4;
   }
 }
